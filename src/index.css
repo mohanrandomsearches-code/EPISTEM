@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colour Palette */
+  --color-primary: #00C9A7;    /* Mint Green */
+  --color-secondary: #FFB830;  /* Sunshine Yellow */
+  --color-accent: #4FACFE;     /* Sky Blue */
+  --color-danger: #FF6B6B;     /* Coral Red */
+  --color-ai-purple: #7C3AED;  /* Soft Violet */
+  --color-success: #06D6A0;    /* Leaf Green */
+  --color-background: #F7F9FC; /* Warm White */
+  --color-text: #1A1A2E;       /* Ink Navy */
+  --color-muted: #6B7A99;      /* Slate */
+
+  /* Typography */
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Nunito", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Default Radius */
+  --radius-2xl: 1rem;
+  --radius-default: var(--radius-2xl);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-2xl font-bold hover:opacity-90 transition-all active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-text px-6 py-3 rounded-2xl font-bold hover:opacity-90 transition-all active:scale-95;
+}
+
